@@ -182,7 +182,6 @@ python src/track_and_count.py ^
 
 输出结果：
 
-- [12208359_1920_1080_60fps_tracked.mp4](artifacts/tracking/12208359_1920_1080_60fps_tracked.mp4)
 - [12208359_1920_1080_60fps_tracks.csv](artifacts/tracking/12208359_1920_1080_60fps_tracks.csv)
 
 最终越线计数结果：
@@ -236,7 +235,6 @@ python src/export_key_frames.py ^
 
 ### 跟踪与计数结果
 
-- `artifacts/tracking/12208359_1920_1080_60fps_tracked.mp4`
 - `artifacts/tracking/12208359_1920_1080_60fps_tracks.csv`
 
 ### 关键帧分析结果

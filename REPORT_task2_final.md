@@ -203,9 +203,8 @@ VisDrone 原始标注为逗号分隔格式，每一行包含：
 
 ## 7. 视频多目标跟踪结果
 
-在训练完成后，使用 `best.pt` 对测试视频 `12208359_1920_1080_60fps.mp4` 进行逐帧检测与跟踪。最终生成如下结果文件：
+在训练完成后，使用 `best.pt` 对测试视频 `12208359_1920_1080_60fps.mp4` 进行逐帧检测与跟踪，并导出跟踪结果表格：
 
-- [12208359_1920_1080_60fps_tracked.mp4](artifacts/tracking/12208359_1920_1080_60fps_tracked.mp4)
 - [12208359_1920_1080_60fps_tracks.csv](artifacts/tracking/12208359_1920_1080_60fps_tracks.csv)
 
 根据跟踪结果统计：
@@ -271,7 +270,6 @@ VisDrone 原始标注为逗号分隔格式，每一行包含：
 
 对应结果文件如下：
 
-- [12208359_1920_1080_60fps_tracked.mp4](artifacts/tracking/12208359_1920_1080_60fps_tracked.mp4)
 - [12208359_1920_1080_60fps_tracks.csv](artifacts/tracking/12208359_1920_1080_60fps_tracks.csv)
 
 ---
@@ -325,7 +323,6 @@ VisDrone 原始标注为逗号分隔格式，每一行包含：
 - [训练日志 CSV](runs/task2_detect/visdrone_yolov8n/results.csv)
 - [训练曲线图](runs/task2_detect/visdrone_yolov8n/results.png)
 - [最佳模型权重](runs/task2_detect/visdrone_yolov8n/weights/best.pt)
-- [跟踪结果视频](artifacts/tracking/12208359_1920_1080_60fps_tracked.mp4)
 - [跟踪结果表格](artifacts/tracking/12208359_1920_1080_60fps_tracks.csv)
 - [遮挡分析关键帧目录](artifacts/analysis/key_frames_600)
 
