@@ -276,6 +276,32 @@ VisDrone 原始标注为逗号分隔格式，每一行包含：
 
 ## 10. 训练过程可视化
 
+本实验使用 `SwanLab` 对检测模型训练过程进行记录，并同步保存了本地训练曲线。对应的在线项目页面为：
+
+- SwanLab 项目：<https://swanlab.cn/@jiab/cv-hw2-task2>
+
+对于目标检测任务，训练过程中更常用的验证指标是 `Precision`、`Recall`、`mAP@0.5` 和 `mAP@0.5:0.95`；相较于分类任务中常见的单一 `Accuracy`，这些指标更能反映检测框定位与类别预测的综合效果。因此，本实验在可视化部分重点展示训练集和验证集上的 loss 曲线，以及验证集上的 `Precision / Recall / mAP` 曲线。
+
+### 10.1 SwanLab 同步的训练/验证曲线
+
+下图给出了训练过程中训练集上的 `box_loss / cls_loss / dfl_loss`，以及验证集上的 `Precision / Recall / mAP@0.5 / mAP@0.5:0.95` 变化趋势。可以看到，在前期若干个 epoch 中 loss 下降较快，而后期进入相对平稳的收敛阶段；与此同时，验证集上的 `mAP@0.5` 与 `mAP@0.5:0.95` 持续提升，并在训练后期达到最佳水平。
+
+![训练集与验证集曲线](runs/task2_detect/visdrone_yolov8n/results.png)
+
+### 10.2 验证集上的 mAP / PR / F1 可视化
+
+为了进一步分析检测性能，本实验还保留了验证集上的 PR 曲线和 F1 曲线。PR 曲线反映了不同阈值下精确率与召回率之间的权衡关系；F1 曲线则更直观地展示了精确率与召回率综合平衡后的整体表现。
+
+![PR 曲线](runs/task2_detect/visdrone_yolov8n/PR_curve.png)
+
+![F1 曲线](runs/task2_detect/visdrone_yolov8n/F1_curve.png)
+
+综合这些可视化结果可以看出：
+
+1. 训练集上的 `box_loss`、`cls_loss` 与 `dfl_loss` 整体呈下降趋势，说明模型在 VisDrone 数据集上完成了有效收敛。
+2. 验证集上的 `Precision`、`Recall` 和 `mAP` 指标在训练中后期逐步趋于稳定，表明模型已经学到较为稳定的检测能力。
+3. 由于 VisDrone 场景中小目标和密集目标较多，`mAP@0.5:0.95` 仍明显低于 `mAP@0.5`，这也反映出精确定位仍是该任务中的主要难点。
+
 本实验使用 `SwanLab` 对检测模型训练过程进行记录，并结合 Ultralytics 自动导出的可视化图进行分析。训练过程中重点关注：
 
 - 训练集上的 `box_loss`、`cls_loss`、`dfl_loss`
