@@ -227,7 +227,6 @@ python src/export_key_frames.py ^
 这组关键帧已用于：
 
 - [REPORT_task2_final.md](REPORT_task2_final.md)
-- `presentation/task1_presentation.tex` 中的 Task 2 部分
 
 ## 结果文件位置
 
@@ -247,7 +246,6 @@ python src/export_key_frames.py ^
 ### 报告与展示
 
 - [REPORT_task2_final.md](REPORT_task2_final.md)
-- [presentation/task1_presentation.pdf](presentation/task1_presentation.pdf)
 
 ## 说明
 
