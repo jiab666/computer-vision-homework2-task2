@@ -314,4 +314,4 @@ VisDrone 原始标注为逗号分隔格式，每一行包含：
 ## 13. 仓库与模型权重链接
 
 - GitHub 仓库地址：<https://github.com/jiab666/computer-vision-homework2-task2>
-- 模型权重下载地址：`待补充`
+- 模型权重下载地址：<https://drive.google.com/drive/folders/1s-FRJuHNT2PVwj1gx36WHMxlbCFGXgK6?usp=drive_link>
